@@ -1,0 +1,60 @@
+===============
+Unity generated
+===============
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+obj/
+
+
+Visual Studio / Rider / VSCode
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+.VC.db
+
+
+OS files
+.DS_Store
+Thumbs.db
+
+
+JetBrains Rider
+.idea/
+
+
+VSCode
+.vscode/
+
+
+Asset store tools
+Assets/AssetStoreTools
+
+
+Build results
+*.apk
+*.aab
+*.exe
+*.app
+
+
+Crash logs
+sysinfo.txt
+
+
+Uncomment if you use the cache server
+/Library/ArtifactsCache/
