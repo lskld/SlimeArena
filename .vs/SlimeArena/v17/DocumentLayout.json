@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Unity\\Projects\\SlimeArena\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\unity\\projects\\slimearena\\assets\\code\\enemysprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\enemysprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\unity\\projects\\slimearena\\assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,14 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EnemySprite.cs",
+              "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\EnemySprite.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\EnemySprite.cs",
+              "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\EnemySprite.cs",
+              "RelativeToolTip": "Assets\\Code\\EnemySprite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T12:50:51.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Player.cs",
               "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\Player.cs",
               "RelativeToolTip": "Assets\\Code\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T11:46:01.325Z",
+              "WhenOpened": "2025-09-27T22:44:51.069Z",
               "EditorCaption": ""
             }
           ]
