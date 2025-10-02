@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float rotationOffset = 270f;
+    [SerializeField] public float playerHP = 100f;
 
     private Rigidbody2D _rb;
     private InputAction _moveAction;
