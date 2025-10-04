@@ -5,6 +5,7 @@ public class EnemySprite : MonoBehaviour
     [SerializeField] public float speed = 2f;
     public GameObject enemyObject;
     public GameObject playerObject;
+    public float health = 100f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,4 +25,14 @@ public class EnemySprite : MonoBehaviour
     {
         
     }
+
+    void DamageEnemy(float damage)
+    {
+        health -= damage;
+        if(health <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 }

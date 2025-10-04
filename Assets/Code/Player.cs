@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,14 +13,12 @@ public class Player : MonoBehaviour
     public float healthAmount = 100f;
 
     private Rigidbody2D _rb;
-    private Rigidbody2D _rbCollider;
     private InputAction _moveAction;
     private Camera _cam;
     private float _aimAngle;
 
     void Awake()
     {
-        _rbCollider = GetComponent<Rigidbody2D>();
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0f;
         _rb.freezeRotation = true;
@@ -70,13 +69,24 @@ public class Player : MonoBehaviour
         if(collision.CompareTag("Enemy"))
         {
             TakeDamage(20);
-            Debug.Log("On Trigger");
         }
     }
 
-    public void TakeDamage(float damage)
+    void TakeDamage(float damage)
     {
         healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
+
+        if(healthAmount <= 0f)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
+
+    //For usage later (to pick up health)
+    void Heal(float healAmount)
+    {
+        healthAmount += healAmount;
         healthBar.fillAmount = healthAmount / 100f;
     }
 
