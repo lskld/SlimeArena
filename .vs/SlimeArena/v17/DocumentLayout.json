@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alex\\SlimeArena\\",
+  "WorkspaceRootPath": "C:\\Unity\\Projects\\SlimeArena\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\users\\alex\\slimearena\\assets\\code\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\unity\\projects\\slimearena\\assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\unity\\projects\\slimearena\\assets\\code\\healthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\healthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\unity\\projects\\slimearena\\assets\\code\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|c:\\users\\alex\\slimearena\\assets\\code\\menuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|C:\\Unity\\Projects\\SlimeArena\\assets\\code\\menuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C001A1EF-B0BA-9F73-A623-6C163537AC21}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\menuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,16 +41,38 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Player.cs",
+              "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\Player.cs",
+              "RelativeToolTip": "Assets\\Code\\Player.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:48:06.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "HealthManager.cs",
+              "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\HealthManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\HealthManager.cs",
+              "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\HealthManager.cs",
+              "RelativeToolTip": "Assets\\Code\\HealthManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T19:45:06.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\SlimeArena\\Assets\\Code\\EnemySpawner.cs",
+              "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\EnemySpawner.cs",
-              "ToolTip": "C:\\Users\\Alex\\SlimeArena\\Assets\\Code\\EnemySpawner.cs",
+              "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\EnemySpawner.cs",
               "RelativeToolTip": "Assets\\Code\\EnemySpawner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -51,16 +81,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MenuScript.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\SlimeArena\\Assets\\Code\\MenuScript.cs",
+              "DocumentMoniker": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\MenuScript.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\MenuScript.cs",
-              "ToolTip": "C:\\Users\\Alex\\SlimeArena\\Assets\\Code\\MenuScript.cs",
+              "ToolTip": "C:\\Unity\\Projects\\SlimeArena\\Assets\\Code\\MenuScript.cs",
               "RelativeToolTip": "Assets\\Code\\MenuScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T13:01:11.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T13:01:11.424Z"
             }
           ]
         }

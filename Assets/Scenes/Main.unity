@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 610, y: -210}
+  m_AnchoredPosition: {x: 270, y: -20}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194905062
@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 465, y: -210}
+  m_AnchoredPosition: {x: 125, y: -20}
   m_SizeDelta: {x: 250, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429410818
@@ -298,8 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c6d277deab2d04386cdd528b603b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  healthBar: {fileID: 2020985000}
-  healthAmount: 100
 --- !u!4 &446477048
 Transform:
   m_ObjectHideFlags: 0
@@ -602,9 +600,9 @@ RectTransform:
   - {fileID: 194905061}
   m_Father: {fileID: 1427804028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1010, y: 564}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 57, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &925953017
@@ -841,6 +839,7 @@ GameObject:
   - component: {fileID: 1044637272}
   - component: {fileID: 1044637273}
   - component: {fileID: 1044637274}
+  - component: {fileID: 1044637275}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -936,6 +935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   moveSpeed: 7
   rotationOffset: 270
+  healthBar: {fileID: 2020985000}
+  healthAmount: 100
 --- !u!50 &1044637273
 Rigidbody2D:
   serializedVersion: 5
@@ -1008,6 +1009,52 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.9, y: 0.9}
+  m_EdgeRadius: 0
+--- !u!61 &1044637275
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044637269}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96875, y: 1}
+    newSize: {x: 0.96875, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1345835346
 GameObject:
@@ -13475,7 +13522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 465, y: -210}
+  m_AnchoredPosition: {x: 125, y: -20}
   m_SizeDelta: {x: 250, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020985000
@@ -13531,6 +13578,14 @@ PrefabInstance:
     - target: {fileID: 3719395969052789645, guid: 613b171f823ce5446b1584401f382fca, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925156138236196186, guid: 613b171f823ce5446b1584401f382fca, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925156138236196186, guid: 613b171f823ce5446b1584401f382fca, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8351535696473605256, guid: 613b171f823ce5446b1584401f382fca, type: 3}
       propertyPath: m_LocalPosition.x

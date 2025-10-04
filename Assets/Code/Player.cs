@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
@@ -7,13 +8,18 @@ public class Player : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float rotationOffset = 270f;
 
+    public Image healthBar;
+    public float healthAmount = 100f;
+
     private Rigidbody2D _rb;
+    private Rigidbody2D _rbCollider;
     private InputAction _moveAction;
     private Camera _cam;
     private float _aimAngle;
 
     void Awake()
     {
+        _rbCollider = GetComponent<Rigidbody2D>();
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0f;
         _rb.freezeRotation = true;
@@ -57,6 +63,21 @@ public class Player : MonoBehaviour
                 _aimAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + rotationOffset;
             }
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy"))
+        {
+            TakeDamage(20);
+            Debug.Log("On Trigger");
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
     }
 
 }
