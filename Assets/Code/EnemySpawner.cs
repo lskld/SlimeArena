@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private GameObject enemyPrefab;
 
-    [SerializeField] private int initialSpawnCount = 1;
+    [SerializeField] private int initialSpawnCount = 10;
 
     private readonly List<Vector2> _edgeWorldPositions = new();
 
@@ -41,13 +41,10 @@ public class EnemySpawner : MonoBehaviour
         if (_edgeWorldPositions.Count == 0)
             Debug.LogWarning("[EnemySpawner] No edge tiles found on the GroundTileMap.");
 
-    }
-
-    void Start()
-    {
         for (int i = 0; i < initialSpawnCount; i++)
             SpawnOne();
     }
+
 
     public GameObject SpawnOne()
     {
