@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
         if(healthAmount <= 0f)
         {
             SceneManager.LoadScene("Menu");
+            Cursor.visible = true;
         }
     }
 
