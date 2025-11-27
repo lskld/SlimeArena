@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float rotationOffset = 270f;
+    [SerializeField] GameObject DeathParticle;
 
     public Image healthBar;
     public float healthAmount = 100f;
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     private InputAction _moveAction;
     private Camera _cam;
     private float _aimAngle;
+
+    private OnPlayerDeath onPlayerDeath;
 
     void Awake()
     {
@@ -34,6 +37,8 @@ public class Player : MonoBehaviour
         wasd.With("Right", "<Keyboard>/d");
 
         _moveAction.Enable();
+
+        onPlayerDeath = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<OnPlayerDeath>();
     }
     void FixedUpdate()
     {
@@ -79,8 +84,7 @@ public class Player : MonoBehaviour
 
         if(healthAmount <= 0f)
         {
-            SceneManager.LoadScene("Menu");
-            Cursor.visible = true;
+            Death();
         }
     }
 
@@ -91,4 +95,10 @@ public class Player : MonoBehaviour
         healthBar.fillAmount = healthAmount / 100f;
     }
 
+    void Death() 
+    {
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
+        Cursor.visible = true;
+        onPlayerDeath.HandlePlayerDeath();
+    }
 }
