@@ -1,83 +1,34 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Tilemap groundTilemap;
-    [SerializeField] private GameObject enemyPrefab;
+    public GameObject enemyPrefab;
+    public float spawnInterval = 5f;
 
-    [SerializeField] private int initialSpawnCount = 10;
+    public Transform[] spawnPoints;
 
-    private readonly List<Vector2> _edgeWorldPositions = new();
-
-    void Awake()
+    private void Start()
     {
-        if (groundTilemap == null)
-        {
-            Debug.LogError("[EnemySpawner] Ground Tilemap reference is missing.");
-            return;
-        }
-
-        groundTilemap.CompressBounds();
-        var b = groundTilemap.cellBounds;
-
-        //Bottom and top
-        for (int x = b.xMin; x < b.xMax; x++)
-        {
-            TryAddEdgeCell(new Vector3Int(x, b.yMin, 0));
-            if (b.yMax - 1 != b.yMin)
-                TryAddEdgeCell(new Vector3Int(x, b.yMax - 1, 0));
-        }
-
-        //Left and right
-        for (int y = b.yMin + 1; y < b.yMax - 1; y++)
-        {
-            TryAddEdgeCell(new Vector3Int(b.xMin, y, 0));
-            if (b.xMax - 1 != b.xMin)
-                TryAddEdgeCell(new Vector3Int(b.xMax - 1, y, 0));
-        }
-
-        if (_edgeWorldPositions.Count == 0)
-            Debug.LogWarning("[EnemySpawner] No edge tiles found on the GroundTileMap.");
-
-        for (int i = 0; i < initialSpawnCount; i++)
-            SpawnOne();
+        StartCoroutine(SpawnEnemyRoutine());
     }
 
-
-    public GameObject SpawnOne()
+    private IEnumerator SpawnEnemyRoutine()
     {
-        if (enemyPrefab == null)
+        while (true)
         {
-            Debug.LogError("[EnemySpawner] Enemy prefab is not assigned.");
-            return null;
+            yield return new WaitForSeconds(spawnInterval);
+            SpawnEnemy();
         }
-        if (_edgeWorldPositions.Count == 0)
-        {
-            Debug.LogWarning("[EnemySpawner] No valid edge positions to spawn.");
-            return null;
-        }
-
-        Vector2 pos = _edgeWorldPositions[Random.Range(0, _edgeWorldPositions.Count)];
-
-        // Instantiate and place using pure 2D (Rigidbody2D.position)
-        GameObject enemy = Instantiate(enemyPrefab);
-        var rb2d = enemy.GetComponent<Rigidbody2D>();
-        if (rb2d != null)
-            rb2d.position = pos;
-        else
-            enemy.transform.position = new Vector3(pos.x, pos.y, 0f); // fallback if no Rigidbody2D
-
-        return enemy;
     }
 
-    private void TryAddEdgeCell(Vector3Int cell)
+    private void SpawnEnemy()
     {
-        if (groundTilemap.HasTile(cell))
-        {
-            Vector3 world3 = groundTilemap.GetCellCenterWorld(cell);
-            _edgeWorldPositions.Add((Vector2)world3); // drop Z immediately
-        }
+        if (spawnPoints.Length == 0) return;
+        int randomIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
+        Transform spawnPoint = spawnPoints[randomIndex];
+        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
     }
 }
